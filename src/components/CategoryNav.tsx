@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const categories = [
   "All",
   "Electronics",
@@ -17,9 +19,12 @@ const CategoryNav = () => {
         <ul className="flex items-center gap-8 py-3 overflow-x-auto">
           {categories.map((category) => (
             <li key={category}>
-              <button className="text-sm whitespace-nowrap hover:text-primary transition-colors font-medium">
+              <Link
+                to={category === "All" ? "/" : `/category/${category.toLowerCase().replace(/\s+/g, "-")}`}
+                className="text-sm whitespace-nowrap hover:text-primary transition-colors font-medium"
+              >
                 {category}
-              </button>
+              </Link>
             </li>
           ))}
         </ul>
