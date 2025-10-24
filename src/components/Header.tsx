@@ -13,9 +13,15 @@ const Header = () => {
             <MapPin className="w-4 h-4" />
             <span>Deliver to Your Location</span>
           </div>
-          {/* USER PHOTO PLACEHOLDER: Replace src with your personal photo path */}
-          {/* <img src="/path-to-your-photo.jpg" alt="User" className="w-8 h-8 rounded-full" /> */}
           <div className="flex items-center gap-4">
+            {/* 
+              TO ADD YOUR PHOTO: 
+              1. Save your photo as 'my-photo.jpg' in the src/assets/ folder
+              2. Uncomment the lines below and update the import at the top
+              
+              import myPhoto from "@/assets/my-photo.jpg";
+              <img src={myPhoto} alt="Your Name" className="w-8 h-8 rounded-full object-cover border-2 border-primary" />
+            */}
             <button className="hover:text-primary transition-colors">Returns & Orders</button>
             <button className="hover:text-primary transition-colors">Customer Service</button>
           </div>
